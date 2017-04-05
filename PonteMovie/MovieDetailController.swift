@@ -10,9 +10,20 @@ import UIKit
 
 class MovieDetailController: UIViewController {
 
+    var item : Movie!
+    
+    var adapter : DetailAdapter?
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        adapter = DetailAdapter()
+        adapter?.collectionView = collectionView
+        adapter?.initzialized(item: item)
+        //
+        self.navigationItem.title = item.title
+        
         // Do any additional setup after loading the view.
     }
 

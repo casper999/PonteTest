@@ -1,19 +1,49 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCell" id="gTV-IL-0wX" customClass="MovieCell" customModule="PonteMovie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="410"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="330" height="410"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oOp-Pa-g0A">
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="380.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" placeholderIntrinsicWidth="22.5" placeholderIntrinsicHeight="14.5" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FDe-x0-8Qu" userLabel="title">
+                        <rect key="frame" x="5" y="390.5" width="320" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="FDe-x0-8Qu" firstAttribute="top" secondItem="oOp-Pa-g0A" secondAttribute="bottom" constant="10" id="8M7-Ry-YO2"/>
+                <constraint firstItem="FDe-x0-8Qu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="A1P-Qo-xvW"/>
+                <constraint firstAttribute="trailing" secondItem="oOp-Pa-g0A" secondAttribute="trailing" id="A4u-xF-dhw"/>
+                <constraint firstItem="oOp-Pa-g0A" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Acv-nz-SVL"/>
+                <constraint firstAttribute="bottom" secondItem="FDe-x0-8Qu" secondAttribute="bottom" constant="5" id="AiU-Vi-Op8"/>
+                <constraint firstItem="oOp-Pa-g0A" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cIo-4d-RbK"/>
+                <constraint firstAttribute="trailing" secondItem="FDe-x0-8Qu" secondAttribute="trailing" constant="5" id="ufg-u3-Kov"/>
+            </constraints>
+            <size key="customSize" width="330" height="410"/>
+            <connections>
+                <outlet property="movieImage" destination="oOp-Pa-g0A" id="FP1-zU-gdr"/>
+                <outlet property="movieTitle" destination="FDe-x0-8Qu" id="eUB-Pc-Gml"/>
+            </connections>
+            <point key="canvasLocation" x="110" y="107"/>
         </collectionViewCell>
     </objects>
 </document>
