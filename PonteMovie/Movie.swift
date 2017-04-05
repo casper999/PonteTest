@@ -70,7 +70,7 @@ class Movie: NSObject, NSCoding {
         let y = (year as NSString).integerValue
         let yearNumber = NSNumber(integerLiteral: y)
         
-        let rating = NSNumber(value: rat)
+        let rating = NSNumber(value: (rat * 2))
         
         
         let movie = Movie(title: title, year: yearNumber, plot: plot, poster: poster, rating: rating, awards: awards)
